@@ -1,3 +1,4 @@
+// src/features/templates/templates.ts
 import type { BookingTemplate } from "../../types/template"
 
 // 2 booking templates to be used to in the app

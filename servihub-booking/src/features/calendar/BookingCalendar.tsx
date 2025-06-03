@@ -1,12 +1,13 @@
-import { Calendar, momentLocalizer, Views } from 'react-big-calendar'
-import moment from 'moment'
-import 'react-big-calendar/lib/css/react-big-calendar.css'
-import { useMemo } from 'react'
+// src/features/calendar/BookingCalendar.tsx
+import { Calendar, momentLocalizer, Views } from 'react-big-calendar';
+import moment from 'moment';
+import 'react-big-calendar/lib/css/react-big-calendar.css';
+import { useMemo } from 'react';
+import type { BookingEvent } from '../../types/booking';
 
-const localizer = momentLocalizer(moment)
+const localizer = momentLocalizer(moment);
 
-// events to be displayed on the calendar
-const mockEvents = [
+const mockEvents: BookingEvent[] = [
   {
     id: 'bk01',
     title: 'Math Class',
@@ -23,25 +24,22 @@ const mockEvents = [
     status: 'pending',
     templateId: 'salon-appointment',
   },
-]
+];
 
 export function BookingCalendar() {
-  const eventPropGetter = (event: any) => {
-    
-    // colour coded map status to class
+  const eventPropGetter = (event: BookingEvent) => {
     const statusClassMap: Record<string, string> = {
       approved: 'bg-emerald-400 text-white',
       pending: 'bg-indigo-400 text-white',
       rejected: 'bg-red-400 text-white',
       cancelled: 'bg-gray-400 text-white',
-    }
+    };
     return {
       className: `rounded-md px-2 py-1 ${statusClassMap[event.status] || ''}`,
-    }
-  }
+    };
+  };
 
   return (
-    // calendar is wrapped in a div with a fixed height
     <div className="h-[700px] bg-card rounded-xl border p-2">
       <Calendar
         localizer={localizer}
@@ -54,5 +52,5 @@ export function BookingCalendar() {
         style={{ height: '100%' }}
       />
     </div>
-  )
+  );
 }

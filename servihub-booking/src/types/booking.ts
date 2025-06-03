@@ -1,3 +1,4 @@
+// src/types/booking.ts
 export type BookingStatus = 'pending' | 'approved' | 'rejected' | 'cancelled'
 
 export interface BookingEvent {

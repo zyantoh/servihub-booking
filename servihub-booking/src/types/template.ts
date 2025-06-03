@@ -1,3 +1,4 @@
+// src/types/template.ts
 export interface FieldSpec {
     id: string
     label: string
