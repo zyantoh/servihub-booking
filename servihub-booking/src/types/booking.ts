@@ -8,4 +8,5 @@ export interface BookingEvent {
   start: Date
   end: Date
   status: BookingStatus
+  customFields?: Record<string, any>;
 }
