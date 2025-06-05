@@ -16,7 +16,7 @@ interface BookingStore {
         title: 'Math Class',
         start: new Date(),
         end: new Date(new Date().getTime() + 60 * 60 * 1000),
-        status: 'approved',
+        status: 'pending',
         templateId: 'tuition-class',
       },
       {
