@@ -10,7 +10,7 @@ A role-based calendar booking engine built in React with full support for custom
 - **Customer**
   - Select time slots from a calendar
   - Fill dynamic booking forms (e.g. Name, Remarks)
-  - Submit a booking (pending status)
+  - Submit a booking
 
 - **Business**
   - View all bookings
